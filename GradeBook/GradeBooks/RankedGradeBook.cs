@@ -44,7 +44,8 @@ namespace GradeBook.GradeBooks
         {
             if (Students.Count < 5)
             {
-                throw new InvalidOperationException("Ranked grading requires at least 5 students");
+                Console.WriteLine("Ranked grading requires at least 5 students with grades in order to properly calculate a student's overall grade.");
+                return;
             }
             base.CalculateStatistics();
         }
@@ -53,7 +54,8 @@ namespace GradeBook.GradeBooks
         {
             if (Students.Count < 5)
             {
-                throw new InvalidOperationException("Need more than 5 Students");
+                Console.WriteLine("Ranked grading requires at least 5 students with grades in order to properly calculate a student's overall grade.");
+                return;
             }
             base.CalculateStudentStatistics(name);
         }
